@@ -50,13 +50,20 @@ li{
 /*Gallery Section*/
 #gallery{
     border: 2px solid black;
-    
+    display: grid;
+    grid-column: 2/1;
+
 }
 #gallery img{
     max-width: 100%;
 }
 #gallery figure{
     text-align: center;
+}
+
+#lit{
+    max-width:100%;
+    columns: 20rem;
 }
 
 @media screen and (min-width: 60em){
@@ -71,4 +78,35 @@ li{
     font-size: 2rem;
     margin-left: 1rem;
     }
+    
+}
+#lit p:first-letter {
+    float: left;
+    line-height: 85%;
+    font-size: 300%;
+}
+#lit p {
+    clear:both;
+}
+@media screen and (min-width: 100em){
+    #gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+    
+    
+    hr{
+        display: none;
+    }
+    
+    #gallery h2{
+        grid-column: 1/-1;
+    }
+   
+    figure{
+        display: block;
+        align-self: center;
+    }
+
 }
